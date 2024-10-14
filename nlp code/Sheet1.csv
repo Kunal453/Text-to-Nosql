@@ -1,0 +1,384 @@
+question,query
+Insert a new document with the fields 'name' and 'phone' into the 'contacts' collection.,"db.contacts.insertOne({ name: 'Jane', phone: '1234567890' })"
+Find all documents where the 'quantity' field is not equal to 0.,db.documents.find({ quantity: { $ne: 0 } })
+Retrieve all users who have not logged in for more than 30 days.,db.users.find({ last_login: { $lt: new Date(Date.now() - 30 * 24 * 60 * 60 * 1000) } })
+Find all products with a price between $10 and $50.,"db.products.find({ price: { $gt: 10, $lt: 50 } })"
+Get the titles of all articles published in the last week.,"db.articles.find({ publication_date: { $gte: new Date(Date.now() - 7 * 24 * 60 * 60 * 1000) } }, { title: 1 })"
+Insert a new document with the fields 'username' and 'age' into the 'customers' collection.,"db.customers.insertOne({ username: 'username', age: 30 })"
+Retrieve the value of the field 'description' for all items in the 'catalog' collection.,"db.catalog.find({}, { description: 1 })"
+Find all documents where the 'status' field is 'pending' and the 'priority' field is 'urgent'.,"db.tasks.find({ status: 'pending', priority: 'urgent' })"
+Retrieve the value of the key 'date' for all tasks in the 'todo' collection.,"db.todo.find({}, { date: 1 })"
+Get all comments made on posts with the tag 'tutorial'.,db.comments.find({ post_tag: 'tutorial' })
+Insert a new document with the fields 'email' and 'password' into the 'users' collection.,"db.users.insertOne({ email: 'email@example.com', password: 'password' })"
+Retrieve the value of the field 'category' for all items in the 'products' collection.,"db.products.find({}, { category: 1 })"
+Find all documents where the 'status' field is not equal to 'resolved' or 'closed'.,"db.documents.find({ status: { $nin: ['resolved', 'closed'] } })"
+Retrieve the value of the key 'title' for all movies in the 'collection' collection.,"db.collection.find({}, { title: 1 })"
+Get all orders with a total amount greater than $1000 and less than $5000.,"db.orders.find({ total_amount: { $gt: 1000, $lt: 5000 } })"
+Insert a new document with the fields 'name' and 'address' into the 'companies' collection.,"db.companies.insertOne({ name: 'Company', address: 'Address' })"
+Retrieve the value of the field 'rating' for all products in the 'items' collection.,"db.items.find({}, { rating: 1 })"
+Find all documents where the 'quantity' field is not equal to 0.,db.documents.find({ quantity: { $ne: 0 } })
+Retrieve the value of the key 'title' for all books in the 'library' collection.,"db.library.find({}, { title: 1 })"
+Get all users who have made purchases in the last month.,db.users.find({ last_purchase_date: { $gte: new Date(Date.now() - 30 * 24 * 60 * 60 * 1000) } })
+Insert a new document with the fields 'name' and 'phone' into the 'contacts' collection.,"db.contacts.insertOne({ name: 'Name', phone: '1234567890' })"
+Retrieve the value of the field 'category' for all items in the 'inventory' collection.,"db.inventory.find({}, { category: 1 })"
+Find all documents where the 'status' field is 'active' and the 'priority' field is 'high'.,"db.documents.find({ $and: [ { status: 'active' }, { priority: 'high' } ] })"
+Retrieve the value of the key 'date' for all events in the 'calendar' collection.,"db.calendar.find({}, { date: 1 })"
+Get all comments made by the user with ID 'user789'.,db.comments.find({ user_id: 'user789' })
+Insert a new document with the fields 'name' and 'email' into the 'contacts' collection.,"db.contacts.insertOne({ name: 'Name', email: 'email@example.com' })"
+Retrieve the value of the field 'category' for all items in the 'inventory' collection.,"db.inventory.find({}, { category: 1 })"
+Find all documents where the 'status' field is not equal to 'completed' or 'cancelled'.,"db.documents.find({ status: { $nin: ['completed', 'cancelled'] } })"
+Retrieve the value of the key 'title' for all books in the 'library' collection.,"db.library.find({}, { title: 1 })"
+Get all transactions with an amount greater than $500 and less than $1000.,"db.transactions.find({ amount: { $gt: 500, $lt: 1000 } })"
+Insert a new document with the fields 'name' and 'phone' into the 'contacts' collection.,"db.contacts.insertOne({ name: 'Name', phone: '1234567890' })"
+Retrieve the value of the field 'rating' for all products in the 'items' collection.,"db.items.find({}, { rating: 1 })"
+Find all documents where the 'quantity' field is not equal to 0.,db.documents.find({ quantity: { $ne: 0 } })
+Retrieve the value of the key 'title' for all books in the 'library' collection.,"db.library.find({}, { title: 1 })"
+Get all users who have made purchases in the last month.,db.users.find({ last_purchase_date: { $gte: new Date(Date.now() - 30 * 24 * 60 * 60 * 1000) } })
+Insert a new document with the fields 'name' and 'address' into the 'locations' collection.,"db.locations.insertOne({ name: 'Name', address: 'Address' })"
+Retrieve the value of the field 'category' for all items in the 'inventory' collection.,"db.inventory.find({}, { category: 1 })"
+Find all documents where the 'status' field is 'active' and the 'priority' field is 'high'.,"db.documents.find({ $and: [ { status: 'active' }, { priority: 'high' } ] })"
+Retrieve the value of the key 'date' for all events in the 'calendar' collection.,"db.calendar.find({}, { date: 1 })"
+Get all comments made by the user with ID 'user789'.,db.comments.find({ user_id: 'user789' })
+Insert a new document with the fields 'name' and 'email' into the 'contacts' collection.,"db.contacts.insertOne({ name: 'Name', email: 'email@example.com' })"
+Retrieve the value of the field 'category' for all items in the 'inventory' collection.,"db.inventory.find({}, { category: 1 })"
+Find all documents where the 'status' field is not equal to 'completed' or 'cancelled'.,"db.documents.find({ status: { $nin: ['completed', 'cancelled'] } })"
+Retrieve the value of the key 'title' for all books in the 'library' collection.,"db.library.find({}, { title: 1 })"
+Get all transactions with an amount greater than $500 and less than $1000.,"db.transactions.find({ amount: { $gt: 500, $lt: 1000 } })"
+Insert a new document with the fields 'name' and 'phone' into the 'contacts' collection.,"db.contacts.insertOne({ name: 'Name', phone: '1234567890' })"
+Retrieve the value of the field 'rating' for all products in the 'items' collection.,"db.items.find({}, { rating: 1 })"
+Find all documents where the 'quantity' field is not equal to 0.,db.documents.find({ quantity: { $ne: 0 } })
+Retrieve the value of the key 'title' for all books in the 'library' collection.,"db.library.find({}, { title: 1 })"
+Retrieve all employees who joined the company in the last six months.,db.employees.find({ hire_date: { $gte: new Date(Date.now() - 6 * 30 * 24 * 60 * 60 * 1000) } })
+Find all products with a quantity greater than 100 and less than 500.,"db.products.find({ quantity: { $gt: 100, $lt: 500 } })"
+Get the titles of all books published in the last year.,"db.books.find({ publication_date: { $gte: new Date(Date.now() - 365 * 24 * 60 * 60 * 1000) } }, { title: 1 })"
+Insert a new document with the fields 'first_name' and 'last_name' into the 'employees' collection.,"db.employees.insertOne({ first_name: 'John', last_name: 'Doe' })"
+Retrieve the value of the field 'price' for all items in the 'inventory' collection.,"db.inventory.find({}, { price: 1 })"
+Find all documents where the 'status' field is 'active' and the 'priority' field is 'low'.,"db.documents.find({ status: 'active', priority: 'low' })"
+Retrieve the value of the key 'date' for all events in the 'schedule' collection.,"db.schedule.find({}, { date: 1 })"
+Get all comments made on articles with the tag 'news'.,db.comments.find({ article_tag: 'news' })
+Insert a new document with the fields 'username' and 'password' into the 'accounts' collection.,"db.accounts.insertOne({ username: 'user123', password: 'password' })"
+Retrieve the value of the field 'category' for all items in the 'products' collection.,"db.products.find({}, { category: 1 })"
+Find all documents where the 'status' field is not equal to 'approved' or 'rejected'.,"db.documents.find({ status: { $nin: ['approved', 'rejected'] } })"
+Retrieve the value of the key 'title' for all movies in the 'films' collection.,"db.films.find({}, { title: 1 })"
+Get all orders placed in the last week with a total amount greater than $500.,"db.orders.find({ order_date: { $gte: new Date(Date.now() - 7 * 24 * 60 * 60 * 1000) }, total_amount: { $gt: 500 } })"
+Insert a new document with the fields 'name' and 'address' into the 'stores' collection.,"db.stores.insertOne({ name: 'Store', address: 'Address' })"
+Retrieve the value of the field 'rating' for all products in the 'items' collection.,"db.items.find({}, { rating: 1 })"
+Find all documents where the 'quantity' field is not equal to 0.,db.documents.find({ quantity: { $ne: 0 } })
+Retrieve the value of the key 'title' for all songs in the 'music' collection.,"db.music.find({}, { title: 1 })"
+Get all customers who made purchases in the last month.,db.customers.find({ last_purchase_date: { $gte: new Date(Date.now() - 30 * 24 * 60 * 60 * 1000) } })
+Insert a new document with the fields 'email' and 'phone' into the 'contacts' collection.,"db.contacts.insertOne({ email: 'email@example.com', phone: '1234567890' })"
+Retrieve the value of the field 'category' for all items in the 'inventory' collection.,"db.inventory.find({}, { category: 1 })"
+Find all documents where the 'status' field is 'open' and the 'priority' field is 'medium'.,"db.documents.find({ $and: [ { status: 'open' }, { priority: 'medium' } ] })"
+Retrieve the value of the key 'date' for all appointments in the 'calendar' collection.,"db.calendar.find({}, { date: 1 })"
+Get all comments made by the user with ID 'user123'.,db.comments.find({ user_id: 'user123' })
+Insert a new document with the fields 'name' and 'email' into the 'clients' collection.,"db.clients.insertOne({ name: 'Client', email: 'client@example.com' })"
+Retrieve the value of the field 'category' for all items in the 'inventory' collection.,"db.inventory.find({}, { category: 1 })"
+Find all documents where the 'status' field is not equal to 'completed' or 'cancelled'.,"db.documents.find({ status: { $nin: ['completed', 'cancelled'] } })"
+Retrieve the value of the key 'title' for all books in the 'library' collection.,"db.library.find({}, { title: 1 })"
+Get all transactions with an amount greater than $1000 and less than $5000.,"db.transactions.find({ amount: { $gt: 1000, $lt: 5000 } })"
+Insert a new document with the fields 'name' and 'phone' into the 'contacts' collection.,"db.contacts.insertOne({ name: 'Name', phone: '1234567890' })"
+Retrieve the value of the field 'rating' for all products in the 'items' collection.,"db.items.find({}, { rating: 1 })"
+Find all documents where the 'quantity' field is not equal to 0.,db.documents.find({ quantity: { $ne: 0 } })
+Retrieve the value of the key 'title' for all books in the 'library' collection.,"db.library.find({}, { title: 1 })"
+Get all users who have made purchases in the last month.,db.users.find({ last_purchase_date: { $gte: new Date(Date.now() - 30 * 24 * 60 * 60 * 1000) } })
+Insert a new document with the fields 'name' and 'address' into the 'locations' collection.,"db.locations.insertOne({ name: 'Name', address: 'Address' })"
+Retrieve the value of the field 'category' for all items in the 'inventory' collection.,"db.inventory.find({}, { category: 1 })"
+Find all documents where the 'status' field is 'active' and the 'priority' field is 'high'.,"db.documents.find({ $and: [ { status: 'active' }, { priority: 'high' } ] })"
+Retrieve the value of the key 'date' for all events in the 'calendar' collection.,"db.calendar.find({}, { date: 1 })"
+Get all comments made by the user with ID 'user789'.,db.comments.find({ user_id: 'user789' })
+Insert a new document with the fields 'name' and 'email' into the 'contacts' collection.,"db.contacts.insertOne({ name: 'Name', email: 'email@example.com' })"
+Retrieve the value of the field 'category' for all items in the 'inventory' collection.,"db.inventory.find({}, { category: 1 })"
+Find all documents where the 'status' field is not equal to 'completed' or 'cancelled'.,"db.documents.find({ status: { $nin: ['completed', 'cancelled'] } })"
+Retrieve the value of the key 'title' for all books in the 'library' collection.,"db.library.find({}, { title: 1 })"
+Get all transactions with an amount greater than $500 and less than $1000.,"db.transactions.find({ amount: { $gt: 500, $lt: 1000 } })"
+Insert a new document with the fields 'name' and 'phone' into the 'contacts' collection.,"db.contacts.insertOne({ name: 'Name', phone: '1234567890' })"
+Retrieve the value of the field 'rating' for all products in the 'items' collection.,"db.items.find({}, { rating: 1 })"
+Find all documents where the 'quantity' field is not equal to 0.,db.documents.find({ quantity: { $ne: 0 } })
+Retrieve the value of the key 'title' for all books in the 'library' collection.,"db.library.find({}, { title: 1 })"
+Find all customers who made purchases in the last 30 days.,db.customers.find({ last_purchase_date: { $gte: new Date(Date.now() - 30 * 24 * 60 * 60 * 1000) } })
+Retrieve the titles of all movies released in the past two years.,"db.movies.find({ release_date: { $gte: new Date(Date.now() - 2 * 365 * 24 * 60 * 60 * 1000) } }, { title: 1 })"
+Get the names of all employees who joined the company in the last quarter.,db.employees.find({ hire_date: { $gte: new Date(Date.now() - 3 * 30 * 24 * 60 * 60 * 1000) } })
+Insert a new document with the fields 'username' and 'password' into the 'users' collection.,"db.users.insertOne({ username: 'user123', password: 'password' })"
+Retrieve the value of the field 'price' for all items in the 'catalog' collection.,"db.catalog.find({}, { price: 1 })"
+Find all documents where the 'status' field is 'pending' and the 'priority' field is 'high'.,"db.documents.find({ status: 'pending', priority: 'high' })"
+Retrieve the value of the key 'date' for all events in the 'calendar' collection.,"db.calendar.find({}, { date: 1 })"
+Get all comments made on posts with the tag 'technology'.,db.comments.find({ post_tag: 'technology' })
+Insert a new document with the fields 'name' and 'email' into the 'subscribers' collection.,"db.subscribers.insertOne({ name: 'Name', email: 'email@example.com' })"
+Retrieve the value of the field 'category' for all items in the 'products' collection.,"db.products.find({}, { category: 1 })"
+Find all documents where the 'status' field is not equal to 'active' or 'resolved'.,"db.documents.find({ status: { $nin: ['active', 'resolved'] } })"
+Retrieve the value of the key 'title' for all albums in the 'music' collection.,"db.music.find({}, { title: 1 })"
+Get all orders placed in the last 24 hours with a total amount greater than $1000.,"db.orders.find({ order_date: { $gte: new Date(Date.now() - 24 * 60 * 60 * 1000) }, total_amount: { $gt: 1000 } })"
+Insert a new document with the fields 'name' and 'address' into the 'companies' collection.,"db.companies.insertOne({ name: 'Company', address: 'Address' })"
+Retrieve the value of the field 'rating' for all products in the 'items' collection.,"db.items.find({}, { rating: 1 })"
+Find all documents where the 'quantity' field is not equal to 0.,db.documents.find({ quantity: { $ne: 0 } })
+Retrieve the value of the key 'title' for all books in the 'library' collection.,"db.library.find({}, { title: 1 })"
+Get all customers who made purchases in the last week.,db.customers.find({ last_purchase_date: { $gte: new Date(Date.now() - 7 * 24 * 60 * 60 * 1000) } })
+Insert a new document with the fields 'email' and 'phone' into the 'contacts' collection.,"db.contacts.insertOne({ email: 'email@example.com', phone: '1234567890' })"
+Retrieve the value of the field 'category' for all items in the 'inventory' collection.,"db.inventory.find({}, { category: 1 })"
+Find all documents where the 'status' field is 'open' and the 'priority' field is 'low'.,"db.documents.find({ $and: [ { status: 'open' }, { priority: 'low' } ] })"
+Retrieve the value of the key 'date' for all appointments in the 'scheduler' collection.,"db.scheduler.find({}, { date: 1 })"
+Get all comments made by the user with ID 'user456'.,db.comments.find({ user_id: 'user456' })
+Insert a new document with the fields 'name' and 'email' into the 'clients' collection.,"db.clients.insertOne({ name: 'Name', email: 'email@example.com' })"
+Retrieve the value of the field 'category' for all items in the 'inventory' collection.,"db.inventory.find({}, { category: 1 })"
+Find all documents where the 'status' field is not equal to 'completed' or 'cancelled'.,"db.documents.find({ status: { $nin: ['completed', 'cancelled'] } })"
+Retrieve the value of the key 'title' for all books in the 'library' collection.,"db.library.find({}, { title: 1 })"
+Get all transactions with an amount greater than $5000 and less than $10000.,"db.transactions.find({ amount: { $gt: 5000, $lt: 10000 } })"
+Insert a new document with the fields 'name' and 'phone' into the 'contacts' collection.,"db.contacts.insertOne({ name: 'Name', phone: '1234567890' })"
+Retrieve the value of the field 'rating' for all products in the 'items' collection.,"db.items.find({}, { rating: 1 })"
+Find all documents where the 'quantity' field is not equal to 0.,db.documents.find({ quantity: { $ne: 0 } })
+Retrieve the value of the key 'title' for all books in the 'library' collection.,"db.library.find({}, { title: 1 })"
+Get all users who have made purchases in the last week.,db.users.find({ last_purchase_date: { $gte: new Date(Date.now() - 7 * 24 * 60 * 60 * 1000) } })
+Insert a new document with the fields 'name' and 'address' into the 'locations' collection.,"db.locations.insertOne({ name: 'Name', address: 'Address' })"
+Retrieve the value of the field 'category' for all items in the 'inventory' collection.,"db.inventory.find({}, { category: 1 })"
+Find all documents where the 'status' field is 'active' and the 'priority' field is 'medium'.,"db.documents.find({ $and: [ { status: 'active' }, { priority: 'medium' } ] })"
+Retrieve the value of the key 'date' for all events in the 'scheduler' collection.,"db.scheduler.find({}, { date: 1 })"
+Get all comments made by the user with ID 'user789'.,db.comments.find({ user_id: 'user789' })
+Insert a new document with the fields 'name' and 'email' into the 'contacts' collection.,"db.contacts.insertOne({ name: 'Name', email: 'email@example.com' })"
+Retrieve the value of the field 'category' for all items in the 'inventory' collection.,"db.inventory.find({}, { category: 1 })"
+Find all documents where the 'status' field is not equal to 'completed' or 'cancelled'.,"db.documents.find({ status: { $nin: ['completed', 'cancelled'] } })"
+Retrieve the value of the key 'title' for all books in the 'library' collection.,"db.library.find({}, { title: 1 })"
+Get all transactions with an amount greater than $10000 and less than $20000.,"db.transactions.find({ amount: { $gt: 10000, $lt: 20000 } })"
+Insert a new document with the fields 'name' and 'phone' into the 'contacts' collection.,"db.contacts.insertOne({ name: 'Name', phone: '1234567890' })"
+Retrieve the value of the field 'rating' for all products in the 'items' collection.,"db.items.find({}, { rating: 1 })"
+Find all documents where the 'quantity' field is not equal to 0.,db.documents.find({ quantity: { $ne: 0 } })
+Retrieve the value of the key 'title' for all books in the 'library' collection.,"db.library.find({}, { title: 1 })"
+Find all users who registered in the last month.,db.users.find({ registration_date: { $gte: new Date(Date.now() - 30 * 24 * 60 * 60 * 1000) } })
+Retrieve the titles of all articles published in the past year.,"db.articles.find({ publication_date: { $gte: new Date(Date.now() - 365 * 24 * 60 * 60 * 1000) } }, { title: 1 })"
+Get the names of all employees hired in the last six months.,db.employees.find({ hire_date: { $gte: new Date(Date.now() - 6 * 30 * 24 * 60 * 60 * 1000) } })
+Insert a new document with the fields 'name' and 'age' into the 'people' collection.,"db.people.insertOne({ name: 'Name', age: 30 })"
+Retrieve the value of the field 'price' for all items in the 'store' collection.,"db.store.find({}, { price: 1 })"
+Find all documents where the 'status' field is 'approved' and the 'priority' field is 'urgent'.,"db.documents.find({ status: 'approved', priority: 'urgent' })"
+Retrieve the value of the key 'date' for all entries in the 'log' collection.,"db.log.find({}, { date: 1 })"
+Get all reviews for products with the tag 'electronics'.,db.reviews.find({ product_tag: 'electronics' })
+Insert a new document with the fields 'title' and 'content' into the 'articles' collection.,"db.articles.insertOne({ title: 'Title', content: 'Content' })"
+Retrieve the value of the field 'category' for all items in the 'inventory' collection.,"db.inventory.find({}, { category: 1 })"
+Find all documents where the 'status' field is not equal to 'active' or 'completed'.,"db.documents.find({ status: { $nin: ['active', 'completed'] } })"
+Retrieve the value of the key 'title' for all documents in the 'files' collection.,"db.files.find({}, { title: 1 })"
+Get all orders placed in the last 48 hours with a total amount greater than $500.,"db.orders.find({ order_date: { $gte: new Date(Date.now() - 48 * 60 * 60 * 1000) }, total_amount: { $gt: 500 } })"
+Insert a new document with the fields 'name' and 'address' into the 'clients' collection.,"db.clients.insertOne({ name: 'Name', address: 'Address' })"
+Retrieve the value of the field 'rating' for all products in the 'items' collection.,"db.items.find({}, { rating: 1 })"
+Find all documents where the 'quantity' field is not equal to 0.,db.documents.find({ quantity: { $ne: 0 } })
+Retrieve the value of the key 'title' for all books in the 'library' collection.,"db.library.find({}, { title: 1 })"
+Get all customers who made purchases in the last three days.,db.customers.find({ last_purchase_date: { $gte: new Date(Date.now() - 3 * 24 * 60 * 60 * 1000) } })
+Insert a new document with the fields 'email' and 'phone' into the 'contacts' collection.,"db.contacts.insertOne({ email: 'email@example.com', phone: '1234567890' })"
+Retrieve the value of the field 'category' for all items in the 'inventory' collection.,"db.inventory.find({}, { category: 1 })"
+Find all documents where the 'status' field is 'open' and the 'priority' field is 'high'.,"db.documents.find({ $and: [ { status: 'open' }, { priority: 'high' } ] })"
+Retrieve the value of the key 'date' for all appointments in the 'calendar' collection.,"db.calendar.find({}, { date: 1 })"
+Get all comments made by the user with ID 'user123'.,db.comments.find({ user_id: 'user123' })
+Insert a new document with the fields 'name' and 'email' into the 'customers' collection.,"db.customers.insertOne({ name: 'Name', email: 'email@example.com' })"
+Retrieve the value of the field 'category' for all items in the 'products' collection.,"db.products.find({}, { category: 1 })"
+Find all documents where the 'status' field is not equal to 'completed' or 'cancelled'.,"db.documents.find({ status: { $nin: ['completed', 'cancelled'] } })"
+Retrieve the value of the key 'title' for all books in the 'library' collection.,"db.library.find({}, { title: 1 })"
+Get all transactions with an amount greater than $2000 and less than $5000.,"db.transactions.find({ amount: { $gt: 2000, $lt: 5000 } })"
+Insert a new document with the fields 'name' and 'phone' into the 'contacts' collection.,"db.contacts.insertOne({ name: 'Name', phone: '1234567890' })"
+Retrieve the value of the field 'rating' for all products in the 'items' collection.,"db.items.find({}, { rating: 1 })"
+Find all documents where the 'quantity' field is not equal to 0.,db.documents.find({ quantity: { $ne: 0 } })
+Retrieve the value of the key 'title' for all books in the 'library' collection.,"db.library.find({}, { title: 1 })"
+Get all users who have made purchases in the last week.,db.users.find({ last_purchase_date: { $gte: new Date(Date.now() - 7 * 24 * 60 * 60 * 1000) } })
+Insert a new document with the fields 'name' and 'address' into the 'locations' collection.,"db.locations.insertOne({ name: 'Name', address: 'Address' })"
+Retrieve the value of the field 'category' for all items in the 'inventory' collection.,"db.inventory.find({}, { category: 1 })"
+Find all documents where the 'status' field is 'active' and the 'priority' field is 'medium'.,"db.documents.find({ $and: [ { status: 'active' }, { priority: 'medium' } ] })"
+Retrieve the value of the key 'date' for all events in the 'scheduler' collection.,"db.scheduler.find({}, { date: 1 })"
+Get all comments made by the user with ID 'user456'.,db.comments.find({ user_id: 'user456' })
+Insert a new document with the fields 'name' and 'email' into the 'contacts' collection.,"db.contacts.insertOne({ name: 'Name', email: 'email@example.com' })"
+Retrieve the value of the field 'category' for all items in the 'inventory' collection.,"db.inventory.find({}, { category: 1 })"
+Find all documents where the 'status' field is not equal to 'completed' or 'cancelled'.,"db.documents.find({ status: { $nin: ['completed', 'cancelled'] } })"
+Retrieve the value of the key 'title' for all books in the 'library' collection.,"db.library.find({}, { title: 1 })"
+Get all transactions with an amount greater than $10000 and less than $20000.,"db.transactions.find({ amount: { $gt: 10000, $lt: 20000 } })"
+Insert a new document with the fields 'name' and 'phone' into the 'contacts' collection.,"db.contacts.insertOne({ name: 'Name', phone: '1234567890' })"
+Retrieve the value of the field 'rating' for all products in the 'items' collection.,"db.items.find({}, { rating: 1 })"
+Find all documents where the 'quantity' field is not equal to 0.,db.documents.find({ quantity: { $ne: 0 } })
+Retrieve the value of the key 'title' for all books in the 'library' collection.,"db.library.find({}, { title: 1 })"
+Retrieve all users who have logged in within the last week.,db.users.find({ last_login_date: { $gte: new Date(Date.now() - 7 * 24 * 60 * 60 * 1000) } })
+Fetch the names of all products added to the inventory in the past month.,"db.inventory.find({ add_date: { $gte: new Date(Date.now() - 30 * 24 * 60 * 60 * 1000) } }, { product_name: 1 })"
+Get the addresses of all customers who signed up in the last three months.,"db.customers.find({ signup_date: { $gte: new Date(Date.now() - 3 * 30 * 24 * 60 * 60 * 1000) } }, { address: 1 })"
+Add a new document with the fields 'username' and 'password' into the 'accounts' collection.,"db.accounts.insertOne({ username: 'Username', password: 'Password' })"
+Retrieve the values of the field 'price' for all items in the 'inventory' collection.,"db.inventory.find({}, { price: 1 })"
+Find all documents where the 'status' field is 'pending' and the 'priority' field is 'high'.,"db.documents.find({ status: 'pending', priority: 'high' })"
+Retrieve the values of the key 'timestamp' for all records in the 'logs' collection.,"db.logs.find({}, { timestamp: 1 })"
+Get all orders for items with the tag 'clothing'.,db.orders.find({ product_tag: 'clothing' })
+Add a new document with the fields 'title' and 'description' into the 'tasks' collection.,"db.tasks.insertOne({ title: 'Title', description: 'Description' })"
+Retrieve the values of the field 'category' for all items in the 'products' collection.,"db.products.find({}, { category: 1 })"
+Find all documents where the 'status' field is not equal to 'inactive' or 'archived'.,"db.documents.find({ status: { $nin: ['inactive', 'archived'] } })"
+Retrieve the values of the key 'name' for all documents in the 'folders' collection.,"db.folders.find({}, { name: 1 })"
+Get all bookings made in the last 24 hours with a total cost greater than $1000.,"db.bookings.find({ booking_date: { $gte: new Date(Date.now() - 24 * 60 * 60 * 1000) }, total_cost: { $gt: 1000 } })"
+Add a new document with the fields 'name' and 'email' into the 'subscribers' collection.,"db.subscribers.insertOne({ name: 'Name', email: 'email@example.com' })"
+Retrieve the values of the field 'rating' for all items in the 'products' collection.,"db.products.find({}, { rating: 1 })"
+Find all documents where the 'quantity' field is not equal to 0.,db.documents.find({ quantity: { $ne: 0 } })
+Retrieve the values of the key 'title' for all documents in the 'books' collection.,"db.books.find({}, { title: 1 })"
+Get all customers who made purchases in the last two days.,db.customers.find({ last_purchase_date: { $gte: new Date(Date.now() - 2 * 24 * 60 * 60 * 1000) } })
+Add a new document with the fields 'name' and 'phone' into the 'contacts' collection.,"db.contacts.insertOne({ name: 'Name', phone: '1234567890' })"
+Retrieve the values of the field 'category' for all items in the 'inventory' collection.,"db.inventory.find({}, { category: 1 })"
+Find all documents where the 'status' field is 'active' and the 'priority' field is 'low'.,"db.documents.find({ $and: [ { status: 'active' }, { priority: 'low' } ] })"
+Retrieve the values of the key 'date' for all entries in the 'journal' collection.,"db.journal.find({}, { date: 1 })"
+Get all comments made by the user with ID 'user789'.,db.comments.find({ user_id: 'user789' })
+Add a new document with the fields 'name' and 'email' into the 'subscribers' collection.,"db.subscribers.insertOne({ name: 'Name', email: 'email@example.com' })"
+Retrieve the values of the field 'category' for all items in the 'inventory' collection.,"db.inventory.find({}, { category: 1 })"
+Find all documents where the 'status' field is not equal to 'completed' or 'closed'.,"db.documents.find({ status: { $nin: ['completed', 'closed'] } })"
+Retrieve the values of the key 'title' for all documents in the 'articles' collection.,"db.articles.find({}, { title: 1 })"
+Get all transactions with an amount greater than $5000 and less than $10000.,"db.transactions.find({ amount: { $gt: 5000, $lt: 10000 } })"
+Add a new document with the fields 'name' and 'phone' into the 'contacts' collection.,"db.contacts.insertOne({ name: 'Name', phone: '1234567890' })"
+Retrieve the values of the field 'rating' for all items in the 'products' collection.,"db.products.find({}, { rating: 1 })"
+Find all documents where the 'quantity' field is not equal to 0.,db.documents.find({ quantity: { $ne: 0 } })
+Retrieve the values of the key 'title' for all documents in the 'books' collection.,"db.books.find({}, { title: 1 })"
+Get all users who have made purchases in the last three days.,db.users.find({ last_purchase_date: { $gte: new Date(Date.now() - 3 * 24 * 60 * 60 * 1000) } })
+Add a new document with the fields 'name' and 'address' into the 'locations' collection.,"db.locations.insertOne({ name: 'Name', address: 'Address' })"
+Retrieve the values of the field 'category' for all items in the 'inventory' collection.,"db.inventory.find({}, { category: 1 })"
+Find all documents where the 'status' field is 'active' and the 'priority' field is 'medium'.,"db.documents.find({ $and: [ { status: 'active' }, { priority: 'medium' } ] })"
+Retrieve the values of the key 'date' for all events in the 'calendar' collection.,"db.calendar.find({}, { date: 1 })"
+Get all comments made by the user with ID 'user987'.,db.comments.find({ user_id: 'user987' })
+Add a new document with the fields 'name' and 'email' into the 'subscribers' collection.,"db.subscribers.insertOne({ name: 'Name', email: 'email@example.com' })"
+Retrieve the values of the field 'category' for all items in the 'inventory' collection.,"db.inventory.find({}, { category: 1 })"
+Find all documents where the 'status' field is not equal to 'completed' or 'cancelled'.,"db.documents.find({ status: { $nin: ['completed', 'cancelled'] } })"
+Retrieve the values of the key 'title' for all documents in the 'articles' collection.,"db.articles.find({}, { title: 1 })"
+Get all transactions with an amount greater than $20000 and less than $50000.,"db.transactions.find({ amount: { $gt: 20000, $lt: 50000 } })"
+Add a new document with the fields 'name' and 'phone' into the 'contacts' collection.,"db.contacts.insertOne({ name: 'Name', phone: '1234567890' })"
+Retrieve the values of the field 'rating' for all items in the 'products' collection.,"db.products.find({}, { rating: 1 })"
+Find all documents where the 'quantity' field is not equal to 0.,db.documents.find({ quantity: { $ne: 0 } })
+Retrieve the values of the key 'title' for all documents in the 'books' collection.,"db.books.find({}, { title: 1 })"
+Find all customers who made purchases in the last 30 days.,db.customers.find({ last_purchase_date: { $gte: new Date(Date.now() - 30 * 24 * 60 * 60 * 1000) } })
+Retrieve the titles of all movies released in the past two years.,"db.movies.find({ release_date: { $gte: new Date(Date.now() - 2 * 365 * 24 * 60 * 60 * 1000) } }, { title: 1 })"
+Get the names of all employees who joined the company in the last quarter.,db.employees.find({ hire_date: { $gte: new Date(Date.now() - 3 * 30 * 24 * 60 * 60 * 1000) } })
+Insert a new document with the fields 'username' and 'password' into the 'users' collection.,"db.users.insertOne({ username: 'user123', password: 'password' })"
+Retrieve the value of the field 'price' for all items in the 'catalog' collection.,"db.catalog.find({}, { price: 1 })"
+Find all documents where the 'status' field is 'pending' and the 'priority' field is 'high'.,"db.documents.find({ status: 'pending', priority: 'high' })"
+Retrieve the value of the key 'date' for all events in the 'calendar' collection.,"db.calendar.find({}, { date: 1 })"
+Get all comments made on posts with the tag 'technology'.,db.comments.find({ post_tag: 'technology' })
+Insert a new document with the fields 'name' and 'email' into the 'subscribers' collection.,"db.subscribers.insertOne({ name: 'Name', email: 'email@example.com' })"
+Retrieve the value of the field 'category' for all items in the 'products' collection.,"db.products.find({}, { category: 1 })"
+Find all documents where the 'status' field is not equal to 'active' or 'resolved'.,"db.documents.find({ status: { $nin: ['active', 'resolved'] } })"
+Retrieve the value of the key 'title' for all albums in the 'music' collection.,"db.music.find({}, { title: 1 })"
+Get all orders placed in the last 24 hours with a total amount greater than $1000.,"db.orders.find({ order_date: { $gte: new Date(Date.now() - 24 * 60 * 60 * 1000) }, total_amount: { $gt: 1000 } })"
+Insert a new document with the fields 'name' and 'address' into the 'companies' collection.,"db.companies.insertOne({ name: 'Company', address: 'Address' })"
+Retrieve the value of the field 'rating' for all products in the 'items' collection.,"db.items.find({}, { rating: 1 })"
+Find all documents where the 'quantity' field is not equal to 0.,db.documents.find({ quantity: { $ne: 0 } })
+Retrieve the value of the key 'title' for all books in the 'library' collection.,"db.library.find({}, { title: 1 })"
+Get all customers who made purchases in the last week.,db.customers.find({ last_purchase_date: { $gte: new Date(Date.now() - 7 * 24 * 60 * 60 * 1000) } })
+Insert a new document with the fields 'email' and 'phone' into the 'contacts' collection.,"db.contacts.insertOne({ email: 'email@example.com', phone: '1234567890' })"
+Retrieve the value of the field 'category' for all items in the 'inventory' collection.,"db.inventory.find({}, { category: 1 })"
+Find all documents where the 'status' field is 'open' and the 'priority' field is 'low'.,"db.documents.find({ $and: [ { status: 'open' }, { priority: 'low' } ] })"
+Retrieve the value of the key 'date' for all appointments in the 'scheduler' collection.,"db.scheduler.find({}, { date: 1 })"
+Get all comments made by the user with ID 'user456'.,db.comments.find({ user_id: 'user456' })
+Insert a new document with the fields 'name' and 'email' into the 'clients' collection.,"db.clients.insertOne({ name: 'Name', email: 'email@example.com' })"
+Retrieve the value of the field 'category' for all items in the 'inventory' collection.,"db.inventory.find({}, { category: 1 })"
+Find all documents where the 'status' field is not equal to 'completed' or 'cancelled'.,"db.documents.find({ status: { $nin: ['completed', 'cancelled'] } })"
+Retrieve the value of the key 'title' for all books in the 'library' collection.,"db.library.find({}, { title: 1 })"
+Get all transactions with an amount greater than $5000 and less than $10000.,"db.transactions.find({ amount: { $gt: 5000, $lt: 10000 } })"
+Insert a new document with the fields 'name' and 'phone' into the 'contacts' collection.,"db.contacts.insertOne({ name: 'Name', phone: '1234567890' })"
+Retrieve the value of the field 'rating' for all products in the 'items' collection.,"db.items.find({}, { rating: 1 })"
+Find all documents where the 'quantity' field is not equal to 0.,db.documents.find({ quantity: { $ne: 0 } })
+Retrieve the value of the key 'title' for all books in the 'library' collection.,"db.library.find({}, { title: 1 })"
+Get all users who have made purchases in the last week.,db.users.find({ last_purchase_date: { $gte: new Date(Date.now() - 7 * 24 * 60 * 60 * 1000) } })
+Insert a new document with the fields 'name' and 'address' into the 'locations' collection.,"db.locations.insertOne({ name: 'Name', address: 'Address' })"
+Retrieve the value of the field 'category' for all items in the 'inventory' collection.,"db.inventory.find({}, { category: 1 })"
+Find all documents where the 'status' field is 'active' and the 'priority' field is 'medium'.,"db.documents.find({ $and: [ { status: 'active' }, { priority: 'medium' } ] })"
+Retrieve the value of the key 'date' for all events in the 'scheduler' collection.,"db.scheduler.find({}, { date: 1 })"
+Get all comments made by the user with ID 'user789'.,db.comments.find({ user_id: 'user789' })
+Insert a new document with the fields 'name' and 'email' into the 'contacts' collection.,"db.contacts.insertOne({ name: 'Name', email: 'email@example.com' })"
+Retrieve the value of the field 'category' for all items in the 'inventory' collection.,"db.inventory.find({}, { category: 1 })"
+Find all documents where the 'status' field is not equal to 'completed' or 'cancelled'.,"db.documents.find({ status: { $nin: ['completed', 'cancelled'] } })"
+Retrieve the value of the key 'title' for all books in the 'library' collection.,"db.library.find({}, { title: 1 })"
+Get all transactions with an amount greater than $10000 and less than $20000.,"db.transactions.find({ amount: { $gt: 10000, $lt: 20000 } })"
+Insert a new document with the fields 'name' and 'phone' into the 'contacts' collection.,"db.contacts.insertOne({ name: 'Name', phone: '1234567890' })"
+Retrieve the value of the field 'rating' for all products in the 'items' collection.,"db.items.find({}, { rating: 1 })"
+Find all documents where the 'quantity' field is not equal to 0.,db.documents.find({ quantity: { $ne: 0 } })
+Retrieve the value of the key 'title' for all books in the 'library' collection.,"db.library.find({}, { title: 1 })"
+Retrieve all products with a price greater than $50.,db.products.find({ price: { $gt: 50 } })
+Find all users who registered in the last week.,db.users.find({ registration_date: { $gte: new Date(Date.now() - 7 * 24 * 60 * 60 * 1000) } })
+Get the email addresses of all customers who purchased items in the last 30 days.,"db.customers.find({ purchase_date: { $gte: new Date(Date.now() - 30 * 24 * 60 * 60 * 1000) } }, { email: 1 })"
+Add a new document with the fields 'name' and 'age' into the 'users' collection.,"db.users.insertOne({ name: 'Name', age: 30 })"
+Retrieve the values of the field 'manufacturer' for all items in the 'products' collection.,"db.products.find({}, { manufacturer: 1 })"
+Find all documents where the 'status' field is 'active' and the 'priority' field is 'low'.,"db.documents.find({ $and: [ { status: 'active' }, { priority: 'low' } ] })"
+Retrieve the values of the key 'timestamp' for all entries in the 'activity_log' collection.,"db.activity_log.find({}, { timestamp: 1 })"
+Get all orders placed within the last 24 hours with a total amount greater than $1000.,"db.orders.find({ order_date: { $gte: new Date(Date.now() - 24 * 60 * 60 * 1000) }, total_amount: { $gt: 1000 } })"
+Add a new document with the fields 'username' and 'password' into the 'accounts' collection.,"db.accounts.insertOne({ username: 'Username', password: 'password123' })"
+Retrieve the values of the field 'model' for all items in the 'products' collection.,"db.products.find({}, { model: 1 })"
+Find all documents where the 'status' field is not equal to 'closed' or 'cancelled'.,"db.documents.find({ status: { $nin: ['closed', 'cancelled'] } })"
+Retrieve the values of the key 'date' for all entries in the 'history_log' collection.,"db.history_log.find({}, { date: 1 })"
+Get all transactions with a quantity greater than 10 and less than 50.,"db.transactions.find({ $and: [ { quantity: { $gt: 10 } }, { quantity: { $lt: 50 } } ] })"
+Add a new document with the fields 'title' and 'content' into the 'articles' collection.,"db.articles.insertOne({ title: 'Title', content: 'Content' })"
+Retrieve the values of the field 'color' for all items in the 'products' collection.,"db.products.find({}, { color: 1 })"
+Find all documents where the 'quantity' field is less than or equal to 20.,db.products.find({ quantity: { $lte: 20 } })
+Retrieve the values of the key 'name' for all documents in the 'clients' collection.,"db.clients.find({}, { name: 1 })"
+Get all users who have updated their profiles in the last 3 days.,db.users.find({ profile_update_date: { $gte: new Date(Date.now() - 3 * 24 * 60 * 60 * 1000) } })
+Add a new document with the fields 'title' and 'author' into the 'books' collection.,"db.books.insertOne({ title: 'Title', author: 'Author' })"
+Retrieve the values of the field 'type' for all items in the 'products' collection.,"db.products.find({}, { type: 1 })"
+Find all documents where the 'status' field is 'inactive' and the 'priority' field is 'normal'.,"db.documents.find({ $and: [ { status: 'inactive' }, { priority: 'normal' } ] })"
+Retrieve the values of the key 'date' for all entries in the 'audit_log' collection.,"db.audit_log.find({}, { date: 1 })"
+Get all comments made by the user with ID 'user001'.,db.comments.find({ user_id: 'user001' })
+Add a new document with the fields 'name' and 'email' into the 'subscribers' collection.,"db.subscribers.insertOne({ name: 'Name', email: 'email@example.com' })"
+Retrieve the values of the field 'material' for all items in the 'products' collection.,"db.products.find({}, { material: 1 })"
+Find all documents where the 'status' field is not equal to 'approved' or 'rejected'.,"db.documents.find({ status: { $nin: ['approved', 'rejected'] } })"
+Retrieve the values of the key 'title' for all documents in the 'posts' collection.,"db.posts.find({}, { title: 1 })"
+Get all orders with a total amount greater than $200 and less than $500.,"db.orders.find({ total_amount: { $gt: 200, $lt: 500 } })"
+Add a new document with the fields 'first_name' and 'last_name' into the 'customers' collection.,"db.customers.insertOne({ first_name: 'First', last_name: 'Last' })"
+Retrieve the values of the field 'size' for all items in the 'products' collection.,"db.products.find({}, { size: 1 })"
+Find all documents where the 'quantity' field is greater than 100.,db.products.find({ quantity: { $gt: 100 } })
+Retrieve the values of the key 'name' for all documents in the 'users' collection.,"db.users.find({}, { name: 1 })"
+Get all users who have made purchases in the last 3 months.,db.users.find({ last_login_date: { $gte: new Date(Date.now() - 24 * 60 * 60 * 1000) } })
+Add a new document with the fields 'title' and 'category' into the 'items' collection.,"db.pages.insertOne({ title: 'Title', content: 'Content' })"
+Retrieve the values of the field 'weight' for all items in the 'products' collection.,"db.products.find({}, { weight: 1 })"
+Find all documents where the 'status' field is 'pending' and the 'priority' field is 'urgent'.,"db.documents.find({ $and: [ { status: 'pending' }, { priority: 'urgent' } ] })"
+Retrieve the values of the key 'timestamp' for all entries in the 'access_log' collection.,"db.access_log.find({}, { timestamp: 1 })"
+Get all comments made by the user with ID 'user002'.,db.comments.find({ user_id: 'user002' })
+Add a new document with the fields 'name' and 'email' into the 'contacts' collection.,"db.contacts.insertOne({ name: 'Name', email: 'email@example.com' })"
+Retrieve the values of the field 'style' for all items in the 'products' collection.,"db.products.find({}, { style: 1 })"
+Find all documents where the 'status' field is not equal to 'draft' or 'archived'.,"db.documents.find({ status: { $nin: ['draft', 'archived'] } })"
+Retrieve the values of the key 'title' for all documents in the 'news' collection.,"db.news.find({}, { title: 1 })"
+Get all orders placed between 10 AM and 2 PM with a total amount greater than $1000.,"db.orders.find({ order_time: { $gte: ISODate('2024-04-16T10:00:00.000Z'), $lte: ISODate('2024-04-16T14:00:00.000Z') }, total_amount: { $gt: 1000 } })"
+Add a new document with the fields 'username' and 'password' into the 'users' collection.,"db.users.insertOne({ username: 'Username', password: 'password123' })"
+Retrieve the values of the field 'rating' for all items in the 'products' collection.,"db.products.find({}, { rating: 1 })"
+Find all documents where the 'quantity' field is less than 10.,db.products.find({ quantity: { $lt: 10 } })
+Retrieve the values of the key 'name' for all documents in the 'clients' collection.,"db.clients.find({}, { name: 1 })"
+Get all users who have logged in within the last 24 hours.,db.users.find({ last_login_date: { $gte: new Date(Date.now() - 24 * 60 * 60 * 1000) } })
+Add a new document with the fields 'title' and 'content' into the 'pages' collection.,"db.pages.insertOne({ title: 'Title', content: 'Content' })"
+Retrieve the values of the field 'category' for all items in the 'products' collection.,"db.products.find({}, { category: 1 })"
+Find all documents where the 'status' field is 'active' and the 'priority' field is 'normal'.,"db.documents.find({ $and: [ { status: 'active' }, { priority: 'normal' } ] })"
+Retrieve the values of the key 'timestamp' for all entries in the 'event_log' collection.,"db.event_log.find({}, { timestamp: 1 })"
+Get all comments made by the user with ID 'user003'.,db.comments.find({ user_id: 'user003' })
+Add a new document with the fields 'name' and 'email' into the 'subscribers' collection.,"db.subscribers.insertOne({ name: 'Name', email: 'email@example.com' })"
+Retrieve the values of the field 'category' for all items in the 'products' collection.,"db.products.find({}, { category: 1 })"
+Find all documents where the 'status' field is not equal to 'resolved' or 'closed'.,"db.documents.find({ status: { $nin: ['resolved', 'closed'] } })"
+Retrieve the values of the key 'title' for all documents in the 'articles' collection.,"db.articles.find({}, { title: 1 })"
+Retrieve all documents with a field named 'location'.,db.documents.find({ location: { $exists: true } })
+Find all users who have not logged in for the past week.,db.users.find({ last_login_date: { $lt: new Date(Date.now() - 7 * 24 * 60 * 60 * 1000) } })
+Get the email addresses of all customers who made purchases in the last 30 days.,"db.customers.find({ purchase_date: { $gte: new Date(Date.now() - 30 * 24 * 60 * 60 * 1000) } }, { email: 1 })"
+Add a new document with the fields 'title' and 'author' into the 'books' collection.,"db.books.insertOne({ title: 'Title', author: 'Author' })"
+Retrieve the values of the field 'price' for all items in the 'products' collection.,"db.products.find({}, { price: 1 })"
+Find all documents where the 'status' field is 'pending' and the 'priority' field is 'urgent'.,"db.documents.find({ $and: [ { status: 'pending' }, { priority: 'urgent' } ] })"
+Retrieve the values of the key 'date' for all entries in the 'event_log' collection.,"db.event_log.find({}, { date: 1 })"
+Get all orders placed within the last 24 hours with a total amount greater than $1000.,"db.orders.find({ order_date: { $gte: new Date(Date.now() - 24 * 60 * 60 * 1000) }, total_amount: { $gt: 1000 } })"
+Add a new document with the fields 'name' and 'email' into the 'subscribers' collection.,"db.subscribers.insertOne({ name: 'Name', email: 'email@example.com' })"
+Retrieve the values of the field 'manufacturer' for all items in the 'inventory' collection.,"db.inventory.find({}, { manufacturer: 1 })"
+Find all documents where the 'status' field is not equal to 'completed' or 'cancelled'.,"db.documents.find({ status: { $nin: ['completed', 'cancelled'] } })"
+Retrieve the values of the key 'timestamp' for all entries in the 'order_log' collection.,"db.order_log.find({}, { timestamp: 1 })"
+Get all transactions with a quantity greater than 10 and less than 30.,"db.transactions.find({ $and: [ { quantity: { $gt: 10 } }, { quantity: { $lt: 30 } } ] })"
+Add a new document with the fields 'first_name' and 'last_name' into the 'employees' collection.,"db.employees.insertOne({ first_name: 'First', last_name: 'Last' })"
+Retrieve the values of the field 'size' for all items in the 'inventory' collection.,"db.inventory.find({}, { size: 1 })"
+Find all documents where the 'quantity' field is less than or equal to 20.,db.documents.find({ quantity: { $lte: 20 } })
+Retrieve the values of the key 'name' for all documents in the 'clients' collection.,"db.clients.find({}, { name: 1 })"
+Get all users who have updated their profiles in the last 10 days.,db.users.find({ profile_update_date: { $gte: new Date(Date.now() - 10 * 24 * 60 * 60 * 1000) } })
+Add a new document with the fields 'title' and 'content' into the 'pages' collection.,"db.pages.insertOne({ title: 'Title', content: 'Content' })"
+Retrieve the values of the field 'category' for all items in the 'inventory' collection.,"db.inventory.find({}, { category: 1 })"
+Find all documents where the 'status' field is 'active' and the 'priority' field is 'normal'.,"db.documents.find({ $and: [ { status: 'active' }, { priority: 'normal' } ] })"
+Retrieve the values of the key 'timestamp' for all entries in the 'activity_log' collection.,"db.activity_log.find({}, { timestamp: 1 })"
+Get all comments made by the user with ID 'user007'.,db.comments.find({ user_id: 'user007' })
+Add a new document with the fields 'name' and 'email' into the 'newsletter' collection.,"db.newsletter.insertOne({ name: 'Name', email: 'email@example.com' })"
+Retrieve the values of the field 'category' for all items in the 'inventory' collection.,"db.inventory.find({}, { category: 1 })"
+Find all documents where the 'status' field is not equal to 'approved' or 'rejected'.,"db.documents.find({ status: { $nin: ['approved', 'rejected'] } })"
+Retrieve the values of the key 'title' for all documents in the 'articles' collection.,"db.articles.find({}, { title: 1 })"
+Get all orders with a total amount greater than $400 and less than $900.,"db.orders.find({ total_amount: { $gt: 400, $lt: 900 } })"
+Add a new document with the fields 'username' and 'password' into the 'accounts' collection.,"db.accounts.insertOne({ username: 'Username', password: 'Password' })"
+Retrieve the values of the field 'weight' for all items in the 'inventory' collection.,"db.inventory.find({}, { weight: 1 })"
+Find all documents where the 'quantity' field is greater than 30.,db.documents.find({ quantity: { $gt: 30 } })
+Retrieve the values of the key 'name' for all documents in the 'users' collection.,"db.users.find({}, { name: 1 })"
+Get all users who have made purchases in the last 3 months.,db.users.find({ purchase_date: { $gte: new Date(Date.now() - 3 * 30 * 24 * 60 * 60 * 1000) } })
+Add a new document with the fields 'title' and 'category' into the 'items' collection.,"db.items.insertOne({ title: 'Title', category: 'Category' })"
+Retrieve the values of the field 'style' for all items in the 'inventory' collection.,"db.inventory.find({}, { style: 1 })"
+Find all documents where the 'status' field is 'active' and the 'priority' field is 'high'.,"db.documents.find({ $and: [ { status: 'active' }, { priority: 'high' } ] })"
+Retrieve the values of the key 'timestamp' for all entries in the 'log_data' collection.,"db.log_data.find({}, { timestamp: 1 })"
+Get all comments made by the user with ID 'user008'.,db.comments.find({ user_id: 'user008' })
+Add a new document with the fields 'name' and 'email' into the 'subscribers' collection.,"db.subscribers.insertOne({ name: 'Name', email: 'email@example.com' })"
+Retrieve the values of the field 'category' for all items in the 'inventory' collection.,"db.inventory.find({}, { category: 1 })"
+Find all documents where the 'status' field is not equal to 'resolved' or 'closed'.,"db.documents.find({ status: { $nin: ['resolved', 'closed'] } })"
+Retrieve the values of the key 'title' for all documents in the 'articles' collection.,"db.articles.find({}, { title: 1 })"
